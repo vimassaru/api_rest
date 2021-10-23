@@ -1,6 +1,6 @@
 class PhotoController {
-  async post(req, answr) {
-    answr.json('Index');
+  async store(req, answr) {
+    answr.json(req.file);
   }
 }
 

@@ -19,12 +19,14 @@ class App {
     this.routes();
   }
 
+  // middlewares to validate things
   middlewares() {
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(express.json());
     this.app.use(express.static(resolve(__dirname, 'uploads')));
   }
 
+  // Routes of an app
   routes() {
     this.app.use('/', homeRoutes);
     this.app.use('/users/', userRoutes);
